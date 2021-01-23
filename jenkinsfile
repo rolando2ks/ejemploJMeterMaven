@@ -1,0 +1,11 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Mvn verify') {
+            steps {
+                bat "mvn verify -Pperformance"
+            }
+        }
+    }
+}
